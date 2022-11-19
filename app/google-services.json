@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "635761879842",
+    "project_id": "sistemamatricula-16ebd",
+    "storage_bucket": "sistemamatricula-16ebd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635761879842:android:0a07bc8938c899c17dd37b",
+        "android_client_info": {
+          "package_name": "pe.cibertec.edu.sistemamatricula"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "635761879842-8oaj9b3h0hug3b1tdocumpoft632p95d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAq5hWcbp4nIFnvRZjURb_Gu_OkHVZRu00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "635761879842-8oaj9b3h0hug3b1tdocumpoft632p95d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
