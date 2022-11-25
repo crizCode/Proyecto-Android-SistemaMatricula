@@ -18,16 +18,6 @@
         tools:layout="@layout/fragment_reportes" />
 
     <fragment
-        android:id="@+id/nav_profesor"
-        android:name="pe.cibertec.edu.sistemamatricula.ui.profesor.ProfesorFragment"
-        android:label="@string/menu_profesores"
-        tools:layout="@layout/fragment_profesor" >
-        <action
-            android:id="@+id/action_nav_profesor_to_profesorOperaFragment"
-            app:destination="@id/profesorOperaFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/nav_alumnos"
         android:name="pe.cibertec.edu.sistemamatricula.ui.alumnos.AlumnosFragment"
         android:label="@string/menu_inicio"
@@ -54,13 +44,38 @@
         tools:layout="@layout/app_bar_main" />
     <fragment
         android:id="@+id/profesorOperaFragment"
-        android:name="pe.cibertec.edu.sistemamatricula.ui.ProfesorOperaFragment"
-        android:label="fragment_profesor_opera"
-        tools:layout="@layout/fragment_profesor_opera" />
+        android:name="pe.cibertec.edu.sistemamatricula.ui.profesor.ProfesorOperaFragment"
+        android:label="Administración Profesor"
+        tools:layout="@layout/fragment_profesor_opera" >
+        <argument
+            android:name="profesor"
+            app:argType="pe.cibertec.edu.sistemamatricula.roon.profesor.Profesor"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_profesorOperaFragment_to_nav_profesor"
+            app:destination="@id/nav_profesor" />
+    </fragment>
     <fragment
         android:id="@+id/alumnosOpeFragment"
         android:name="pe.cibertec.edu.sistemamatricula.ui.alumnos.AlumnosOpeFragment"
-        android:label="fragment_alumnos_ope"
-        tools:layout="@layout/fragment_alumnos_ope" />
+        android:label="Administración Alumnos"
+        tools:layout="@layout/fragment_alumnos_ope" >
+        <action
+            android:id="@+id/action_alumnosOpeFragment_to_nav_alumnos"
+            app:destination="@id/nav_alumnos" />
+        <argument
+            android:name="alumno"
+            app:argType="pe.cibertec.edu.sistemamatricula.roon.alumno.Alumno"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profesor"
+        android:name="pe.cibertec.edu.sistemamatricula.ui.profesor.ProfesorFragment"
+        android:label="Profesor"
+        tools:layout="@layout/fragment_profesor" >
+        <action
+            android:id="@+id/action_nav_profesor_to_profesorOperaFragment"
+            app:destination="@id/profesorOperaFragment" />
+    </fragment>
 
 </navigation>

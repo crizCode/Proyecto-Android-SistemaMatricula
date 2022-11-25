@@ -9,7 +9,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.GoogleAuthProvider
 import pe.cibertec.edu.sistemamatricula.LoginActivity
-import pe.cibertec.edu.sistemamatricula.MainActivity
 import pe.cibertec.edu.sistemamatricula.R
 import pe.cibertec.edu.sistemamatricula.databinding.ActivityLoginBinding
 
@@ -67,7 +66,7 @@ class RegisterActivity : AppCompatActivity() {
         LoginActivity.auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, LoginActivity::class.java))
                     finish()
                 }
             }.addOnFailureListener {

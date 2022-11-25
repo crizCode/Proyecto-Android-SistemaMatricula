@@ -6,8 +6,8 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ProfesorDao {
-    @Query(value = "SELECT * FROM tbl_profesor ORDER BY nom_prod ASC")
-    fun getProductos() : Flow<List<Profesor>>
+    @Query(value = "SELECT * FROM tbl_profesor")
+    fun getProfesores() : Flow<List<Profesor>>
 
     @Query("SELECT * FROM tbl_profesor WHERE id = :id")
     fun get(id: Int): LiveData<Profesor>

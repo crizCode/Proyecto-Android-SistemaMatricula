@@ -1,13 +1,30 @@
 package pe.cibertec.edu.sistemamatricula.ui.profesor
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
+import kotlinx.coroutines.launch
+import pe.cibertec.edu.sistemamatricula.repository.ProfesorRepository
+import pe.cibertec.edu.sistemamatricula.roon.profesor.Profesor
 
-class ProfesorViewModel : ViewModel() {
+class ProfesorViewModel (private  val repositorio: ProfesorRepository): ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is profesor Fragment"
+    val listaProfesores: LiveData<List<Profesor>> = repositorio.todosLosProfesores.asLiveData()
+
+    fun insertar(profesor: Profesor){
+        viewModelScope.launch {
+            repositorio.insertar(profesor)
+        }
     }
-    val text: LiveData<String> = _text
+
+    fun actualizar(profesor: Profesor){
+        viewModelScope.launch {
+            repositorio.update(profesor)
+        }
+    }
+
+    fun eliminar(profesor: Profesor){
+        viewModelScope.launch {
+            repositorio.delete(profesor)
+        }
+    }
+
 }

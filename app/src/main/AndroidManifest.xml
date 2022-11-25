@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemaMatricula"
         tools:targetApi="31"
+        android:name="pe.cibertec.edu.sistemamatricula.ProyectoApplication"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".LoginActivity"

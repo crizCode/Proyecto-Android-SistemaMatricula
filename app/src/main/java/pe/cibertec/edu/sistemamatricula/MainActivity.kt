@@ -3,27 +3,26 @@ package pe.cibertec.edu.sistemamatricula
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
+import com.google.android.material.navigation.NavigationView
 import pe.cibertec.edu.sistemamatricula.LoginActivity.Companion.auth
 import pe.cibertec.edu.sistemamatricula.databinding.ActivityMainBinding
+import pe.cibertec.edu.sistemamatricula.databinding.NavHeaderMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         if(auth.currentUser == null){
             startActivity(Intent(this,LoginActivity::class.java))
@@ -32,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
@@ -48,12 +48,13 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
+        //  view email
+        var email: String
+        email = intent.getStringExtra("email").toString();
+        NavHeaderMainBinding.inflate(layoutInflater).correo.setText(email).toString()
+        
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
