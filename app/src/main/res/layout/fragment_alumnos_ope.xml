@@ -44,7 +44,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="number"
+            android:maxLength="9"
+            android:phoneNumber="true"
             android:textColorHint="#757575"
             tools:ignore="TextContrastCheck" />
 
@@ -59,7 +61,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="text|textEmailAddress"
             android:textColorHint="#757575"
             tools:ignore="TextContrastCheck" />
 

@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import pe.cibertec.edu.sistemamatricula.databinding.ItemProfesorBinding
-import pe.cibertec.edu.sistemamatricula.roon.alumno.Alumno
 import pe.cibertec.edu.sistemamatricula.roon.profesor.Profesor
 
 class ProfesorAdapter(val listaProfesores: List<Profesor>, val onClick:(Profesor) -> Unit, val onClickLong:(Profesor) -> Unit): Adapter<ProfesorViewHolder>() {
@@ -28,5 +27,6 @@ class ProfesorAdapter(val listaProfesores: List<Profesor>, val onClick:(Profesor
     override fun getItemCount(): Int {
         return listaProfesores.size
     }
+
 }
 

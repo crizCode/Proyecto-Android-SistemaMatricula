@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/nav_alumnos"
         android:name="pe.cibertec.edu.sistemamatricula.ui.alumnos.AlumnosFragment"
-        android:label="@string/menu_inicio"
+        android:label="@string/menu_alumnos"
         tools:layout="@layout/fragment_alumnos" >
         <action
             android:id="@+id/action_nav_alumnos_to_alumnosOpeFragment"
@@ -30,7 +30,7 @@
     <fragment
         android:id="@+id/nav_secciones"
         android:name="pe.cibertec.edu.sistemamatricula.ui.seccion.SeccionFragment"
-        android:label="@string/menu_reportes"
+        android:label="@string/menu_secciones"
         tools:layout="@layout/fragment_seccion" />
     <activity
         android:id="@+id/loginActivity"

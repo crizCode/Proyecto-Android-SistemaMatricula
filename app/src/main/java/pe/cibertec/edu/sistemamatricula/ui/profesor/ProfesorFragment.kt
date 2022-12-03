@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -12,6 +13,7 @@ import pe.cibertec.edu.sistemamatricula.ProyectoApplication
 import pe.cibertec.edu.sistemamatricula.R
 import pe.cibertec.edu.sistemamatricula.adapter.ProfesorAdapter
 import pe.cibertec.edu.sistemamatricula.databinding.FragmentProfesorBinding
+import pe.cibertec.edu.sistemamatricula.roon.profesor.Profesor
 import pe.cibertec.edu.sistemamatricula.viewmodel.ViewModelFactory
 
 class ProfesorFragment : Fragment() {
@@ -41,6 +43,22 @@ class ProfesorFragment : Fragment() {
 
               val directions = ProfesorFragmentDirections.actionNavProfesorToProfesorOperaFragment(prof)
               findNavController().navigate(directions)
+
+              /*binding.buscaProf.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+                  override fun onQueryTextSubmit(query: String?): Boolean {
+                      binding.buscaProf.clearFocus()
+                      if (prof.nombre.contains(query.toString())){
+                          listaProfesores.filter { onQueryTextChange(query) }
+
+                      }
+                      return  false
+                  }
+                  override fun onQueryTextChange(query: String?): Boolean {
+                      listaProfesores.filter { onQueryTextChange(query) }
+                      return  false
+                  }
+
+              })*/
           }
           ) { prof ->
               MaterialAlertDialogBuilder(requireContext())

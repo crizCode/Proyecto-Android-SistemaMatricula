@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    app:elevation="5dp"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="10dp"
+    app:elevation="5dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,29 +18,37 @@
             android:id="@+id/txtCodigo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
             android:text="@string/codigo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
             android:text="@string/nombre"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtCodigo" />
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/txtCodigo"
+            app:layout_constraintVertical_bias="0.434" />
 
         <TextView
             android:id="@+id/txtCelular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginBottom="1dp"
+            android:layout_marginBottom="2dp"
             android:text="@string/celular"
+            android:textColor="#3F51B5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtNombre" />
 
@@ -51,6 +59,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginBottom="2dp"
             android:text="@string/correo"
+            android:textColor="#3F51B5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtCelular" />
 
@@ -58,9 +67,10 @@
             android:id="@+id/txtCiclo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="10dp"
             android:layout_marginBottom="2dp"
             android:text="@string/ciclo"
+            android:textColor="#3F51B5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtMail" />
 
@@ -71,7 +81,21 @@
             android:layout_marginStart="10dp"
             android:layout_marginBottom="2dp"
             android:text="@string/estado"
+            android:textColor="#3F51B5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/txtCiclo" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/avatar_2"
+            tools:ignore="ImageContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

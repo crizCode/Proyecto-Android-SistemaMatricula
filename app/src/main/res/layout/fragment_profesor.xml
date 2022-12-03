@@ -7,7 +7,7 @@
     tools:context=".ui.profesor.ProfesorFragment">
 
 
-    <SearchView
+    <androidx.appcompat.widget.SearchView
         android:id="@+id/busca_prof"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +15,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
+        android:background="@drawable/search_view_bg"
         android:iconifiedByDefault="false"
         android:padding="4dp"
         android:queryHint="Buscar profesor"
@@ -27,22 +28,22 @@
         android:layout_width="407dp"
         android:layout_height="522dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="80dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/busca_prof"
-        app:layout_constraintVertical_bias="0.463" />
+        app:layout_constraintTop_toBottomOf="@+id/busca_prof" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btn_addProfe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         android:src="@android:drawable/ic_menu_add"
         app:layout_constraintBottom_toBottomOf="parent"

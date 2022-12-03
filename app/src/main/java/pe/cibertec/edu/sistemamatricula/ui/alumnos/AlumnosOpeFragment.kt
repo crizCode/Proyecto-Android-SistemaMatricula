@@ -66,7 +66,7 @@ class AlumnosOpeFragment : Fragment() {
                 val estado = binding.txtEstado.editText?.text.toString()
 
                 if(codigo.isEmpty()){
-                    binding.txtNom.error = resources.getString(R.string.camporequerido)
+                    binding.txtCod.error = resources.getString(R.string.camporequerido)
                     return@setOnClickListener
                 }
 
@@ -75,7 +75,7 @@ class AlumnosOpeFragment : Fragment() {
                     return@setOnClickListener
                 }
 
-                if(celular == null){
+                if(celular.isEmpty()){
                     binding.txtCelular.error = resources.getString(R.string.camporequerido)
                     return@setOnClickListener
                 }
@@ -125,7 +125,7 @@ class AlumnosOpeFragment : Fragment() {
                 val estado = binding.txtEstado.editText?.text.toString()
 
                 if(codigo.isEmpty()){
-                    binding.txtNom.error = resources.getString(R.string.camporequerido)
+                    binding.txtCod.error = resources.getString(R.string.camporequerido)
                     return@setOnClickListener
                 }
 
@@ -134,7 +134,7 @@ class AlumnosOpeFragment : Fragment() {
                     return@setOnClickListener
                 }
 
-                if(celular == null){
+                if(celular.isEmpty()){
                     binding.txtCelular.error = resources.getString(R.string.camporequerido)
                     return@setOnClickListener
                 }
@@ -144,12 +144,12 @@ class AlumnosOpeFragment : Fragment() {
                     return@setOnClickListener
                 }
 
-                if(ciclo == null){
+                if(ciclo.isEmpty()){
                     binding.txtCiclo.error = resources.getString(R.string.camporequerido)
                     return@setOnClickListener
                 }
 
-                if(estado == null){
+                if(estado.isEmpty()){
                     binding.txtEstado.error = resources.getString(R.string.camporequerido)
                     return@setOnClickListener
                 }

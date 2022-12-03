@@ -96,14 +96,14 @@
         android:id="@+id/imgview_logo"
         android:layout_width="121dp"
         android:layout_height="103dp"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="155dp"
+        android:layout_marginEnd="140dp"
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:srcCompat="@drawable/img_school" />
 
     <TextView
@@ -111,7 +111,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="140dp"
         android:text="@string/action_inicio"
         android:textColor="#054171"
@@ -122,22 +122,15 @@
         app:layout_constraintTop_toBottomOf="@+id/view_title" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="366dp"
-        android:layout_height="73dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView7"
+        android:layout_width="354dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/img_fondo" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:contentDescription="TODO"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_fondo1" />
+        app:srcCompat="@drawable/img_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

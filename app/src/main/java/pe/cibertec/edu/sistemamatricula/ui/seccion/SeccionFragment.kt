@@ -27,11 +27,6 @@ class SeccionFragment : Fragment() {
 
         _binding = FragmentSeccionBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textHome
-        InicioViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
 

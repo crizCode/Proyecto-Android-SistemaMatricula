@@ -69,12 +69,12 @@ class ProfesorOperaFragment : Fragment() {
                     return@setOnClickListener
                 }
 
-                if(area == null){
+                if(area.isEmpty()){
                     binding.txtArea.error = resources.getString(R.string.camporequerido)
                     return@setOnClickListener
                 }
 
-                if(estado == null){
+                if(estado.isEmpty()){
                     binding.txtEstado.error = resources.getString(R.string.camporequerido)
                     return@setOnClickListener
                 }
@@ -111,12 +111,12 @@ class ProfesorOperaFragment : Fragment() {
                         return@setOnClickListener
                     }
 
-                    if(area == null){
+                    if(area.isEmpty()){
                         binding.txtArea.error = resources.getString(R.string.camporequerido)
                         return@setOnClickListener
                     }
 
-                    if(estado == null){
+                    if(estado.isEmpty()){
                         binding.txtEstado.error = resources.getString(R.string.camporequerido)
                         return@setOnClickListener
                     }

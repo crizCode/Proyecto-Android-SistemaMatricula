@@ -28,8 +28,6 @@
     <string name="title_activity_login">SistemaMatricula</string>
 
 
-
-
     <string name="nombre">Nombre</string>
     <string name="correo">Correo</string>
     <string name="area">Area</string>
@@ -37,9 +35,15 @@
     <string name="codigo">Codigo</string>
     <string name="celular">Celular</string>
     <string name="ciclo">Ciclo</string>
-
+    <string name="reciente">Reciente...</string>
     <string name="lista">Lista profesores</string>
 
+
+    <string name="carrera_ti">TECNOLOGÍAS DE LA INFORMACIÓN</string>
+    <string name="carrera_adm">GESTIÓN Y NEGOCIOS</string>
+    <string name="carrera_inge">INGENIERÍA</string>
+    <string name="carrera_comu">COMUNICACIONES</string>
+    <string name="secciones">Secciones....</string>
 
 
     <string name="prompt_email">Email</string>
@@ -52,6 +56,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="client_id" tools:ignore="TypographyDashes">176346144139-553qs9ntri8u875ir5itkd91l4tpputp.apps.googleusercontent.com</string>
+    <string name="toyota">TOYOTA</string>
 
 
 </resources>
